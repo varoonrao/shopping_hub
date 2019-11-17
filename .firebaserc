@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "shopping-hub": "shopping-hub-prod",
+    "default": "shopping-hub-prod"
+  }
+}

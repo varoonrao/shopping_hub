@@ -1,0 +1,51 @@
+<h5>Manage Products</h5>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form #form="ngForm" (submit)="onSubmit(form)">
+        <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+        <div class="form-group">
+          <input name="title" #title="ngModel" [(ngModel)]="service.formData.title" class="form-input"
+            placeholder="Title" required>
+          <div *ngIf="title.invalid && title.touched" class="validation-error">This field is required.</div>
+        </div>
+        <div class="form-group">
+          <input name="price" type="number" #price="ngModel" [(ngModel)]="service.formData.price" class="form-input"
+            placeholder="Price (₹)">
+        </div>
+        <div class="form-group">
+          <input name="category" #category="ngModel" [(ngModel)]="service.formData.category" class="form-input"
+            placeholder="Category">
+        </div>
+        <div class="form-group">
+          <input name="imageUrl" #imageUrl="ngModel" [(ngModel)]="service.formData.imageUrl" class="form-input"
+            placeholder="Image URL">
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-md btn-block btn-success">Save</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <button type="reset" class="btn btn-md btn-block btn-danger">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </form>
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" [src]="imageUrl.value" >
+        <div class="card-body">
+          <h5 class="card-title">{{title.value}}</h5>
+          <p>{{price.value | currency:'INR':true }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

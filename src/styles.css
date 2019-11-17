@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+body{
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+}
+.avatar{
+    width: 75px;
+    height:75px;
+    border-color: none;
+    border-radius: 50px;
+    align-content:space-around;
+    
+    margin:0 35% ;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.mat-raised-button{
+    padding-top: 70px;
+    margin: 0%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16;
+}
+
+input.ng-touched.ng-invalid{
+    border-color: #dc3545;
+}
+ 
+div.validation-error{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+::placeholder{
+    color:rgb(209, 209, 209);
+}
+table.table-hover tbody {
+    cursor: pointer;
+}
+tr:hover{
+   background-color: darkgray;
+}
+

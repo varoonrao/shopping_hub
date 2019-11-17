@@ -1,0 +1,18 @@
+<h5>Table to update the products.</h5>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+      <th>Title</th>
+      <th>Price</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of list">
+        <td (click)="onEdit(product)">{{product.title}}</td>
+        <td (click)="onEdit(product)">{{product.price}}</td>
+        <td><a class="btn text-danger" (click)="onDelete(product.id)">
+            <i class="fa fa-trash"></i>
+        </a></td>
+      </tr>
+    </tbody>
+  </table>

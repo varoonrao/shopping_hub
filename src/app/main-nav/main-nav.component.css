@@ -1,0 +1,44 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 20%;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+
+  top: 0;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px;
+}
+h5{
+  text-align: center; 
+}
+
+.right-align {
+  flex: 1 1 auto;
+}
+
+mat-toolbar mat-list-item ,a {
+  display: inline-block;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+
+
+}
